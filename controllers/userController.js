@@ -45,3 +45,16 @@ exports.postUser = (req, res) => {
     //res.json(allUsers);
     res.json(savedUser);
 };
+
+exports.getActividadesCategoriaUsuario = (req, res) => {
+    let userId = req.params.id;
+    const categoria = req.params.categoria;
+    //convertir userId en number
+    userId = parseInt(userId)
+    const actividades = userModel.getActividadesCategoriaUsuario(userId, categoria);
+    if (!actividades) {
+        res.status(404).json({ message: 'No se encontraron actividades de ese usuario para esa categoria' });
+        return;
+    }
+    res.json(actividades);
+};

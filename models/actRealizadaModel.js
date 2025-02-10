@@ -14,10 +14,10 @@ module.exports = actRealizadaModel
 // para guardar un nueva actividad realizada:
 /*
 {
-    "name": "nombredel proyecto",
-    "description": "descripcion de la actividad realizada",
-    "idCategoria": 1,
-    "fechaInicio": "01-01-2023",
-    "fechaFin": "01-01-2023"
+    "name: "Actividad 3",
+    "description: "Actividad 3descripcion",
+    "idActividad": 3,
+    "dateInicio": "2025-02-08",
+    "dateFinal": "2025-02-08",
 }
 */

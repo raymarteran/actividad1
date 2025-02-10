@@ -31,6 +31,8 @@ exports.postActividadRealizada = (req, res) => {
         return res.status(400).send('La categoría no existe debe crear una categoria primero');
     }
 
+    //agregar status al crear en pendiente
+    newAR.status = 'pending';
     
     actRealizadaModel.postActividadRealizada(newAR);
     res.json(newAR);
