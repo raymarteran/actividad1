@@ -24,3 +24,15 @@ exports.postProyecto = (req, res) => {
     proyectoModel.postProyecto(newProyecto);
     res.json(newProyecto);
 };
+
+exports.getActividadesRealizadas = (req, res) => {
+    let idProyecto = req.params.id;
+    //convertir userId en number
+    idProyecto = parseInt(idProyecto)
+    const actividades = proyectoModel.getActividadesRealizadas(idProyecto);
+    if (!actividades) {
+        res.status(404).json({ message: 'No se encontraron actividades realizadas por este proyecto' });
+        return;
+    }
+    res.json(actividades);
+};

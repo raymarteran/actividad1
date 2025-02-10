@@ -104,7 +104,7 @@ let ActRealizada = [
         id: 2,
         name: 'Actividad 2',
         description: 'Actividad 2descripcion',
-        idActividad: 2,
+        idActividad: 1,
         dateInicio: '2025-02-09',
         dateFinal: '2025-02-09',
         idUser: 1,

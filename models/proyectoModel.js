@@ -1,4 +1,4 @@
-const Proyecto = require('../database/dataBase.js').Proyecto;
+const Proyectos = require('../database/dataBase.js').Proyectos;
 const Actividades = require('../database/dataBase.js').Actividades;
 const actividadRealizada = require('../database/dataBase.js').ActRealizada;
 
@@ -21,6 +21,18 @@ const proyectoModel = {
     postProyecto: (newpro) => {
         Proyecto.push(newpro);
         return newpro
+    },
+    getActividadesRealizadas: (idProyecto) => {
+        const allProyectos = Proyectos.find(proy => proy.id === idProyecto);
+        if (!allProyectos) {
+            return [];
+        }
+        // de todos los proyectos traer las actividades y de las actividades las actividades realizadas
+        const actividades = Actividades.find(act => act.id === allProyectos.idActividad);
+        const actividadesRealizadas = actividadRealizada.filter(actR => actR.idActividad === actividades.id);
+
+        return actividadesRealizadas
+
     }
 }   
 
