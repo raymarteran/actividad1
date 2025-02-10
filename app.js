@@ -1,6 +1,13 @@
 const express = require('express');
 const app = express();
+// Middleware para parsear el cuerpo de las solicitudes en formato JSON
+app.use(express.json());
 
+// Importar las rutas
+const routesUsers = require('./routes/users.js');
+
+
+app.use('/users', routesUsers);
 
 app.get('/', (req, res) => {
     res.send('Entra en la ruta: /');
