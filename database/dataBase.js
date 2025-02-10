@@ -97,6 +97,7 @@ let ActRealizada = [
         idActividad: 1,
         dateInicio: '2025-02-10',
         dateFinal: '2025-02-10',
+        idUser: 1,
         status: 'completed'
     },
     {
@@ -106,6 +107,7 @@ let ActRealizada = [
         idActividad: 2,
         dateInicio: '2025-02-09',
         dateFinal: '2025-02-09',
+        idUser: 1,
         status: 'pending'
     },
     {
@@ -115,7 +117,48 @@ let ActRealizada = [
         idActividad: 3,
         dateInicio: '2025-02-08',
         dateFinal: '2025-02-08',
+        idUser: 1,
         status: 'completed'
+    },
+    {
+        id: 4,
+        name: 'Actividad 4',
+        description: 'Actividad 4descripcion',
+        idActividad: 4,
+        dateInicio: '2025-02-07',
+        dateFinal: '2025-02-07',
+        idUser: 1,
+        status: 'pending'
+    },
+    {
+        id: 5,
+        name: 'Actividad 5',
+        description: 'Actividad 5descripcion',
+        idActividad: 5,
+        dateInicio: '2025-02-06',
+        dateFinal: '2025-02-06',
+        idUser: 1,
+        status: 'pending'
+    },
+    {
+        id: 6,
+        name: 'Actividad 6',
+        description: 'Actividad 6descripcion',
+        idActividad: 6,
+        dateInicio: '2025-02-05',
+        dateFinal: '2025-02-05',
+        idUser: 1,
+        status: 'completed'
+    },
+    {
+        id: 7,
+        name: 'Actividad 7',
+        description: 'Actividad 7descripcion',
+        idActividad: 7,
+        dateInicio: '2025-02-04',
+        dateFinal: '2025-02-04',
+        idUser: 1,
+        status: 'pending'
     }
 ]
 

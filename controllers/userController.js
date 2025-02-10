@@ -58,3 +58,18 @@ exports.getActividadesCategoriaUsuario = (req, res) => {
     }
     res.json(actividades);
 };
+
+//Mostrar las últimas 5 actividades realizadas por un usuario, incluyendo el nombre de la actividad y su categoría.
+
+exports.getLastActividadesRealizadas = (req, res) => {
+    let userId = req.params.id;
+    //convertir userId en number
+    userId = parseInt(userId)
+    const actividades = userModel.getLastActividadesRealizadas(userId);
+    if (!actividades) {
+        res.status(404).json({ message: 'No se encontraron actividades realizadas por ese usuario' });
+        return;
+    }
+    res.json(actividades);
+};
+
