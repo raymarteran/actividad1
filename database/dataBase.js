@@ -29,15 +29,18 @@ let categories = [
 let actividades = [
     {
         id: 1,
-        name: 'Actividad 1'
+        name: 'Actividad 1',
+        idCategoria: 2
     },
     {
         id: 2,
-        name: 'Actividad 2'
+        name: 'Actividad 2',
+        idCategoria: 1
     },
     {
         id: 3,
-        name: 'Actividad 3'
+        name: 'Actividad 3',
+        idCategoria: 3
     }
 ];
 
