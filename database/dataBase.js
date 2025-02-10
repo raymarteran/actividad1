@@ -11,4 +11,20 @@ let users = [
       }
 ];
 
+let categories = [
+    {
+        id: 1,
+        name: 'Categoría 1'
+    },
+    {
+        id: 2,
+        name: 'Categoría 2'
+    },
+    {
+        id: 3,
+        name: 'Categoría 3'
+    }
+];  
+
 exports.Users = users;
+exports.Categorias = categories;

@@ -5,9 +5,12 @@ app.use(express.json());
 
 // Importar las rutas
 const routesUsers = require('./routes/users.js');
+const routesCategories = require('./routes/categories.js');
 
 
 app.use('/users', routesUsers);
+app.use('/categories', routesCategories);
+
 
 app.get('/', (req, res) => {
     res.send('Entra en la ruta: /');
