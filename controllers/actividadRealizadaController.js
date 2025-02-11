@@ -73,3 +73,9 @@ exports.getActividadesAbiertas = (req, res) => {
     }
     res.json(actividades);
 }
+
+exports.deleteActividadRealizada = (req, res) => {
+    let id = req.params.id;
+    actRealizadaModel.deleteActividadRealizada(id);
+    res.json({ message: 'Actividad realizada eliminada' });
+}

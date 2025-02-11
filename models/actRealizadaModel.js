@@ -17,6 +17,10 @@ const actRealizadaModel = {
     getActividadesAbiertas: () => {
         const actividadesAbiertas = ActRealizada.filter(act => act.dateFinal === null);
         return actividadesAbiertas
+    },
+    deleteActividadRealizada: (id) => {
+        const index = ActRealizada.findIndex(act => act.id === id);
+        ActRealizada.splice(index, 1);
     }
 }   
 

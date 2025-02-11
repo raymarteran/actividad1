@@ -10,6 +10,9 @@ router.get('/actividades-realizadas-por-fechas', Controller.getActividadesRealiz
 router.get('/actividadesrealizadas-name', Controller.getActividadesRealizadasPorNombreActividad);
 //mostrar actividades abiertas sin fecha de finailizacion
 router.get('/actividades-activas', Controller.getActividadesAbiertas);
+//Eliminar actividad realizada y sus relaciones.
+router.delete('/:id', Controller.deleteActividadRealizada);
+
 
 
 module.exports = router;
