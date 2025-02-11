@@ -8,6 +8,8 @@ router.post('/', Controller.postActividadRealizada);
 router.get('/actividades-realizadas-por-fechas', Controller.getActividadesRealizadasPorFechas);
 //buscar actividadres realizadas por nombre de la actividad
 router.get('/actividadesrealizadas-name', Controller.getActividadesRealizadasPorNombreActividad);
+//mostrar actividades abiertas sin fecha de finailizacion
+router.get('/actividades-activas', Controller.getActividadesAbiertas);
 
 
 module.exports = router;

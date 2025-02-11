@@ -171,6 +171,16 @@ let ActRealizada = [
         dateFinal: '2025-02-04',
         idUser: 1,
         status: 'pending'
+    },
+    {
+        id: 8,
+        name: 'Actividad8',
+        description: 'Actividad 8descripcion',
+        idActividad: 8,
+        dateInicio: '2025-02-04',
+        dateFinal: null,
+        idUser: 1,
+        status: 'completed'
     }
 ]
 

@@ -13,6 +13,10 @@ const actRealizadaModel = {
     getActividadesRealizadasPorNombreActividad: (name) => {
         const actividadesRealizadas = ActRealizada.filter(act => act.name === name)
         return actividadesRealizadas
+    },
+    getActividadesAbiertas: () => {
+        const actividadesAbiertas = ActRealizada.filter(act => act.dateFinal === null);
+        return actividadesAbiertas
     }
 }   
 

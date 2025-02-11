@@ -64,3 +64,12 @@ exports.getActividadesRealizadasPorNombreActividad = (req, res) => {
     }
     res.json(actividades);
 }
+
+exports.getActividadesAbiertas = (req, res) => {
+    const actividades = actRealizadaModel.getActividadesAbiertas();
+    if (!actividades) {
+        res.status(404).json({ message: 'No se encontraron actividades abiertas' });
+        return;
+    }
+    res.json(actividades);
+}
