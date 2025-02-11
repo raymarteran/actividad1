@@ -20,9 +20,41 @@ app.use('/proyecto', proyecto);
 app.use('/actividadRealizada', actividadRealizada);
 
 
+const path = require('path');
+
+// Configurar EJS como motor de plantillas
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+
 
 app.get('/', (req, res) => {
-    res.send('Entra en la ruta: /');
+    res.render('index', {
+        title: 'Inicio',
+        message: '¡Bienvenido a la página de inicio!'
+    });
+});
+
+const userModel = require('./models/userModel.js');
+//vista para usuarios
+app.get('/usersView', (req, res) => {
+    const usuarios = userModel.getUsers();
+    res.render('usersView', {
+        usuarios: usuarios
+    });
+});
+//actividades-categoria-usuario
+app.get('/actividadesview', (req, res) => {
+    const actividades = userModel.getActividadesCategoriaUsuario(1, 'categoria1');
+    res.render('actividadesview', {
+        actividades: actividades
+    });
+});
+
+app.get('/', (req, res) => {
+    res.render('index', {
+        title: 'Inicio',
+        message: '¡Bienvenido a la página de inicio!'
+    });
 });
 
 app.use((req, res, next) => {
