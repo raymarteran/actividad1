@@ -37,3 +37,17 @@ exports.postActividadRealizada = (req, res) => {
     actRealizadaModel.postActividadRealizada(newAR);
     res.json(newAR);
 };
+
+exports.getActividadesRealizadasPorFechas = (req, res) => {
+    let startDate = req.query.desde;
+    let endDate = req.query.hasta;
+
+    console.log(startDate, endDate);
+    const actividades = actRealizadaModel.getActividadesRealizadasPorFechas(startDate, endDate);
+    if (!actividades) {
+        res.status(404).json({ message: 'No se encontraron actividades realizadas en ese rango de fechas' });
+        return;
+    }
+    res.json(actividades);
+};
+//http://localhost:3000/actividadRealizada/actividades-realizadas-por-fechas?desde='2025-02-08'&hasta='2025-02-11'
