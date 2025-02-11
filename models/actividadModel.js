@@ -22,8 +22,8 @@ module.exports = actividadModel
 // para guardar una nueva categoria:
 /*
 {
-    "name": "nombre de la actividad",
-    "idCategoria": 1,
-    "idProyecto": 1
+    "name": "Actividad 1",
+    "idCategoria": 2,
+    "idUser": 1
 }
 */

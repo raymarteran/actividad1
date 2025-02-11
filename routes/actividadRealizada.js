@@ -12,6 +12,8 @@ router.get('/actividadesrealizadas-name', Controller.getActividadesRealizadasPor
 router.get('/actividades-activas', Controller.getActividadesAbiertas);
 //Eliminar actividad realizada y sus relaciones.
 router.delete('/:id', Controller.deleteActividadRealizada);
+//Modificar actividad realizada, tanto sus propios detalles como su relación hacia la actividad.
+router.put('/:id', Controller.putActividadRealizada);
 
 
 

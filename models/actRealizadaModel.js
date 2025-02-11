@@ -21,6 +21,10 @@ const actRealizadaModel = {
     deleteActividadRealizada: (id) => {
         const index = ActRealizada.findIndex(act => act.id === id);
         ActRealizada.splice(index, 1);
+    },
+    putActividadRealizada: (id, newAR) => {
+        const index = ActRealizada.findIndex(act => act.id === id);
+        ActRealizada[index] = newAR;
     }
 }   
 
@@ -30,10 +34,24 @@ module.exports = actRealizadaModel
 // para guardar un nueva actividad realizada:
 /*
 {
-    "name: "Actividad 3",
-    "description: "Actividad 3descripcion",
-    "idActividad": 3,
-    "dateInicio": "2025-02-08",
-    "dateFinal": "2025-02-08",
+    "name": "Actividad1",
+    "description": "Actividad 1descripcion",
+    "idActividad": 1,
+    "dateInicio": "2025-02-03",
+    "dateFinal": "2025-02-04",
+    "status": "pending"
+}
+*/
+
+
+///para hacer put de una actividad realizada
+/*
+{
+    "name": "Actividad7",
+    "description": "Actividad 7descripcion",
+    "idActividad": 7,
+    "dateInicio": "2025-02-03",
+    "dateFinal": "2025-02-04",
+    "status": "pending"
 }
 */

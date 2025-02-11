@@ -79,3 +79,12 @@ exports.deleteActividadRealizada = (req, res) => {
     actRealizadaModel.deleteActividadRealizada(id);
     res.json({ message: 'Actividad realizada eliminada' });
 }
+
+exports.putActividadRealizada = (req, res) => {
+    let id = req.params.id;
+    //convertir el id en number
+    id = parseInt(id)
+    let newAR = req.body;
+    actRealizadaModel.putActividadRealizada(id, newAR);
+    res.json(newAR);
+}

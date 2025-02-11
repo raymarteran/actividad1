@@ -37,7 +37,8 @@ module.exports = habitoModel
 // para guardar una nueva categoria:
 /*
 {
-    "name": "nombre del habito",
-    "idActividad": 1
+    "name": "Hábito 1",
+    "idActividad": 1,
+    "idUser": 1
 }
 */
