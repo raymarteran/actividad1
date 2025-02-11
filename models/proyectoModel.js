@@ -4,7 +4,7 @@ const actividadRealizada = require('../database/dataBase.js').ActRealizada;
 
 const proyectoModel = {
     getProyectos: () => {
-        return Proyecto.map(proyecto => {
+        return Proyectos.map(proyecto => {
             const actividades = Actividades.find(act => act.id === proyecto.idActividad);
             const actividadesRealizadas = actividadRealizada.filter(actR => actR.idActividad === actividades.id);
 
@@ -44,6 +44,23 @@ const proyectoModel = {
             actR.tiempoUso = Math.round((new Date(actR.dateFinal) - new Date(actR.dateInicio)) / (1000 * 60 * 60 * 24));
         });
         return actividadesRealizadas
+    },
+    //Eliminar proyecto y sus actividades realizadas.
+    deleteProyecto: (idProyecto) => {
+        const allProyectos = Proyectos.find(proy => proy.id === idProyecto);
+        if (!allProyectos) {
+            return [];
+        }
+        const actividades = Actividades.find(act => act.id === allProyectos.idActividad);
+        const actividadesRealizadas = actividadRealizada.filter(actR => actR.idActividad === actividades.id);
+
+        const index = Proyectos.indexOf(allProyectos);
+        const indexActividades = Actividades.indexOf(actividades);
+        const indexActividadesRealizadas = actividadRealizada.indexOf(actividadesRealizadas);
+
+        Proyectos.splice(index, 1);
+        Actividades.splice(indexActividades, 1);
+        actividadRealizada.splice(indexActividadesRealizadas, 1);
     }
 }   
 

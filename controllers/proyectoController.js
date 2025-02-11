@@ -45,3 +45,11 @@ exports.getTiempoUsado = (req, res) => {
     }
     res.json(actividades);
 };
+
+exports.deleteProyecto = (req, res) => {
+    let id = req.params.id;
+    //pasar el id a number
+    id = parseInt(id)
+    proyectoModel.deleteProyecto(id);
+    res.json({ message: 'Proyecto eliminado' });
+}

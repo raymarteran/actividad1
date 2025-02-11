@@ -7,5 +7,7 @@ router.get('/actividades-realizadas/:id', Controller.getActividadesRealizadas);
 router.post('/', Controller.postProyecto);
 //tiempo usado por proyecto
 router.get('/tiempo-usado', Controller.getTiempoUsado);
+//Eliminar proyecto y sus actividades realizadas.
+router.delete('/:id', Controller.deleteProyecto);
 
 module.exports = router;
