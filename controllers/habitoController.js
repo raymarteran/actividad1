@@ -18,3 +18,7 @@ exports.postHabito = (req, res) => {
     habitoModel.postHabito(newHabito);
     res.json(newHabito);
 };
+
+exports.getHabitosNoActividadesRealizadas = (req, res) => {
+    res.json(habitoModel.getHabitosNoActividadesRealizadas());
+};

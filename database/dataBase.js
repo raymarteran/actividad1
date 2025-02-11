@@ -46,6 +46,12 @@ let habitos = [
         name: 'Hábito 3',
         idActividad: 3,
         idUser: 3
+    },
+    {
+        id: 4,
+        name: 'Hábito4',
+        idActividad: 1,
+        idUser: 1
     }
 ]
 
@@ -87,6 +93,12 @@ let actividades = [
         name: 'Actividad 3',
         idCategoria: 3,
         idUser: 3
+    },
+    {
+        id: 4,
+        name: 'Actividad4',
+        idCategoria: 2,
+        idUser: 1
     }
 ];
 let ActRealizada = [
@@ -124,7 +136,7 @@ let ActRealizada = [
         id: 4,
         name: 'Actividad 4',
         description: 'Actividad 4descripcion',
-        idActividad: 4,
+        idActividad: 1,
         dateInicio: '2025-02-07',
         dateFinal: '2025-02-07',
         idUser: 1,
