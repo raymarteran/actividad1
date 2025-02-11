@@ -62,6 +62,7 @@ sistema debe ser capaz de:
 * Eliminar proyecto y sus actividades realizadas.
 * Modificar actividad realizada, tanto sus propios detalles como su relación hacia la actividad.
 
+Se utilizaron metodos POST GET DELETE UPDATE, para realizar las consultas a la api.
 
 ## Propósito Educativo
 

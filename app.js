@@ -35,6 +35,7 @@ app.get('/', (req, res) => {
 });
 
 const userModel = require('./models/userModel.js');
+const categoriesModel = require('./models/categoriesModel.js');
 //vista para usuarios
 app.get('/usersView', (req, res) => {
     const usuarios = userModel.getUsers();
@@ -47,6 +48,20 @@ app.get('/actividadesview', (req, res) => {
     const actividades = userModel.getActividadesCategoriaUsuario(1, 'categoria1');
     res.render('actividadesview', {
         actividades: actividades
+    });
+});
+//actividades realizadas
+app.get('/actividadesRealizadas', (req, res) => {
+    const actividadesRealizadas = userModel.getLastActividadesRealizadas(1);
+    res.render('actividadesr', {
+        actividadesRealizadas: actividadesRealizadas
+    });
+});
+//categorias
+app.get('/categorias', (req, res) => {
+    const categorias = categoriesModel.getCategorias();
+    res.render('categorias', {
+        categorias: categorias
     });
 });
 
