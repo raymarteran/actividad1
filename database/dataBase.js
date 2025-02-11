@@ -107,7 +107,7 @@ let ActRealizada = [
         name: 'ActividadR1',
         description: 'Actividad 1descripcion',
         idActividad: 1,
-        dateInicio: '2025-02-10',
+        dateInicio: '2025-02-01',
         dateFinal: '2025-02-10',
         idUser: 1,
         status: 'completed'
@@ -117,7 +117,7 @@ let ActRealizada = [
         name: 'ActividadR2',
         description: 'Actividad 2descripcion',
         idActividad: 1,
-        dateInicio: '2025-02-09',
+        dateInicio: '2025-02-07',
         dateFinal: '2025-02-09',
         idUser: 1,
         status: 'pending'
@@ -127,7 +127,7 @@ let ActRealizada = [
         name: 'ActividadR3',
         description: 'Actividad 3descripcion',
         idActividad: 3,
-        dateInicio: '2025-02-08',
+        dateInicio: '2025-02-06',
         dateFinal: '2025-02-08',
         idUser: 1,
         status: 'completed'
@@ -137,7 +137,7 @@ let ActRealizada = [
         name: 'ActividadR4',
         description: 'Actividad 4descripcion',
         idActividad: 1,
-        dateInicio: '2025-02-07',
+        dateInicio: '2025-02-05',
         dateFinal: '2025-02-07',
         idUser: 1,
         status: 'pending'
@@ -147,7 +147,7 @@ let ActRealizada = [
         name: 'ActividadR5',
         description: 'Actividad 5descripcion',
         idActividad: 5,
-        dateInicio: '2025-02-06',
+        dateInicio: '2025-02-01',
         dateFinal: '2025-02-06',
         idUser: 1,
         status: 'pending'
@@ -157,7 +157,7 @@ let ActRealizada = [
         name: 'ActividadR6',
         description: 'Actividad 6descripcion',
         idActividad: 6,
-        dateInicio: '2025-02-05',
+        dateInicio: '2025-02-02',
         dateFinal: '2025-02-05',
         idUser: 1,
         status: 'completed'
@@ -167,7 +167,7 @@ let ActRealizada = [
         name: 'Actividad7',
         description: 'Actividad 7descripcion',
         idActividad: 7,
-        dateInicio: '2025-02-04',
+        dateInicio: '2025-02-03',
         dateFinal: '2025-02-04',
         idUser: 1,
         status: 'pending'

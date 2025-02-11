@@ -36,3 +36,12 @@ exports.getActividadesRealizadas = (req, res) => {
     }
     res.json(actividades);
 };
+
+exports.getTiempoUsado = (req, res) => {
+    const actividades = proyectoModel.getTiempoUsado();
+    if (!actividades) {
+        res.status(404).json({ message: 'No se encontraron actividades realizadas por este proyecto' });
+        return;
+    }
+    res.json(actividades);
+};

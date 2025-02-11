@@ -32,7 +32,18 @@ const proyectoModel = {
         const actividadesRealizadas = actividadRealizada.filter(actR => actR.idActividad === actividades.id);
 
         return actividadesRealizadas
-
+    },
+    getTiempoUsado: () => {
+        
+        // de todos los proyectos traer las actividades y de las actividades las actividades realizadas
+        const allProyec = Proyectos.map(proy => ({ ...proy, actividades: Actividades.find(act => act.id === proy.idActividad) }));
+        const actividadesRealizadas = actividadRealizada.map(actR => ({ ...actR, actividades: Actividades.find(act => act.id === actR.idActividad) }));
+        
+        //calcular el tiempo de usado por cada actividad realizada comparando las fechas de inicio y final de la actividad realizada dateInicio y dateFinal si es el mismo dia debe dar el resultado tiempoUso: 1 dia
+        actividadesRealizadas.forEach(actR => {
+            actR.tiempoUso = Math.round((new Date(actR.dateFinal) - new Date(actR.dateInicio)) / (1000 * 60 * 60 * 24));
+        });
+        return actividadesRealizadas
     }
 }   
 
