@@ -9,6 +9,10 @@ const actRealizadaModel = {
     getActividadesRealizadasPorFechas: (startDate, endDate) => {
         const actividades = ActRealizada.filter(act => new Date(act.dateInicio) > new Date(startDate) && new Date(act.dateFinal) < new Date(endDate));
         return actividades
+    },
+    getActividadesRealizadasPorNombreActividad: (name) => {
+        const actividadesRealizadas = ActRealizada.filter(act => act.name === name)
+        return actividadesRealizadas
     }
 }   
 

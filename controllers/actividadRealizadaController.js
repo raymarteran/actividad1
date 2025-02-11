@@ -51,3 +51,16 @@ exports.getActividadesRealizadasPorFechas = (req, res) => {
     res.json(actividades);
 };
 //http://localhost:3000/actividadRealizada/actividades-realizadas-por-fechas?desde='2025-02-08'&hasta='2025-02-11'
+
+
+
+exports.getActividadesRealizadasPorNombreActividad = (req, res) => {
+    let name = req.query.name;
+    console.log("name que busca", name)
+    const actividades = actRealizadaModel.getActividadesRealizadasPorNombreActividad(name);
+    if (!actividades) {
+        res.status(404).json({ message: 'No se encontraron actividades realizadas con ese nombre' });
+        return;
+    }
+    res.json(actividades);
+}

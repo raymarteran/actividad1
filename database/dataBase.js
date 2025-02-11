@@ -104,7 +104,7 @@ let actividades = [
 let ActRealizada = [
     {
         id: 1,
-        name: 'Actividad 1',
+        name: 'ActividadR1',
         description: 'Actividad 1descripcion',
         idActividad: 1,
         dateInicio: '2025-02-10',
@@ -114,7 +114,7 @@ let ActRealizada = [
     },
     {
         id: 2,
-        name: 'Actividad 2',
+        name: 'ActividadR2',
         description: 'Actividad 2descripcion',
         idActividad: 1,
         dateInicio: '2025-02-09',
@@ -124,7 +124,7 @@ let ActRealizada = [
     },
     {
         id: 3,
-        name: 'Actividad 3',
+        name: 'ActividadR3',
         description: 'Actividad 3descripcion',
         idActividad: 3,
         dateInicio: '2025-02-08',
@@ -134,7 +134,7 @@ let ActRealizada = [
     },
     {
         id: 4,
-        name: 'Actividad 4',
+        name: 'ActividadR4',
         description: 'Actividad 4descripcion',
         idActividad: 1,
         dateInicio: '2025-02-07',
@@ -144,7 +144,7 @@ let ActRealizada = [
     },
     {
         id: 5,
-        name: 'Actividad 5',
+        name: 'ActividadR5',
         description: 'Actividad 5descripcion',
         idActividad: 5,
         dateInicio: '2025-02-06',
@@ -154,7 +154,7 @@ let ActRealizada = [
     },
     {
         id: 6,
-        name: 'Actividad 6',
+        name: 'ActividadR6',
         description: 'Actividad 6descripcion',
         idActividad: 6,
         dateInicio: '2025-02-05',
@@ -164,7 +164,7 @@ let ActRealizada = [
     },
     {
         id: 7,
-        name: 'Actividad 7',
+        name: 'Actividad7',
         description: 'Actividad 7descripcion',
         idActividad: 7,
         dateInicio: '2025-02-04',
